@@ -12,18 +12,78 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="Titre" />
-        <TextBox />
-        <TextBlock Text="Resume" />
-        <TextBox />
-        <TextBlock Text="Nb Saisons" />
-        <TextBox />
-        <TextBlock Text="Nb Episodes" />
-        <TextBox />
-        <TextBlock Text="Annee creation" />
-        <TextBox />
-        <TextBlock Text="Chaine" />
-        <TextBox />
-        <Button Content="Ajouter" />
+        <StackPanel>
+            <TextBlock
+                x:Name="tblock_titre"
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                FontSize="25px"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Text="Titre" />
+            <TextBox
+                Width="200px"
+                Height="30px"
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                RelativePanel.Below="tblock_titre" />
+            <TextBlock
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Text="Resume" />
+            <TextBox
+                Width="800px"
+                Height="100px"
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <TextBlock
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Text="Nb Saisons" />
+            <TextBox
+                Height="10px"
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <TextBlock
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Text="Nb Episodes" />
+            <TextBox
+                Height="10px"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <TextBlock
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Text="Annee creation" />
+            <TextBox
+                Height="10px"
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <TextBlock
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Text="Chaine" />
+            <TextBox
+                Height="10px"
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <Button
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                Command="{Binding BtnAjoutSerie}"
+                Content="Ajouter"
+                RelativePanel.AlignHorizontalCenterWithPanel="True" />
+        </StackPanel>
+
     </Grid>
 </Page>

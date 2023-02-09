@@ -41,22 +41,16 @@ namespace APICLIENT.Services
             }
         }
 
-        public async Task<bool> GetSerieAsync(string nomControlleur, int idSerie)
+        public async Task<List<Serie>> GetSerieAsync(string nomControlleur, int idSerie)
         {
             try
             {
-                HttpResponseMessage response = await client.GetAsync(nomControlleur+idSerie);
-                response.EnsureSuccessStatusCode();
-                if (response.IsSuccessStatusCode)
-                {
-                    return true;
-                }
-                return false;
+                return await client.GetFromJsonAsync<List<Serie>>(nomControlleur + idSerie);
             }
             catch (Exception)
             {
 
-                return false;
+                return null;
             }
         }
 

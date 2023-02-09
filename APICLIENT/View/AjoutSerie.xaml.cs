@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation and Contributors.
 // Licensed under the MIT License.
 
+using APICLIENT.ViewModels;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -29,6 +30,9 @@ namespace APICLIENT.View
         public AjoutSerie()
         {
             this.InitializeComponent();
+            AjoutSerieViewModel ajoutSerieViewModel = new AjoutSerieViewModel();
+            DataContext = ajoutSerieViewModel;
         }
+
     }
 }
